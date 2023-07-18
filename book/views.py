@@ -11,7 +11,7 @@ from .serializer import BookSerializer, AuthorSerializer
 # Create your views here.
 from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
-class AllBookView(generics.ListCreateAPIView):
+class AllCreateBookView(generics.ListCreateAPIView):
     queryset = BookModel.objects.all()
     serializer_class = BookSerializer
     permission_classes = (IsAuthenticated,)
@@ -19,49 +19,19 @@ class AllBookView(generics.ListCreateAPIView):
 #class DetailBookView(generics.Retrive)
 
 
-class DetailDelBookView(generics.RetrieveUpdateDestroyAPIView):
+class DetailDelUpBookView(generics.RetrieveUpdateDestroyAPIView):
     queryset = BookModel.objects.all()
     serializer_class = BookSerializer
     permission_classes = (IsAuthenticated,)
 
 
-class UpdateBookView(generics.UpdateAPIView):
-    queryset = BookModel.objects.all()
-    serializer_class = BookSerializer
-    permission_classes = (IsAuthenticated,)
-
-
-class DeleteBookView(generics.DestroyAPIView):
-    queryset = BookModel.objects.all()
-    serializer_class = BookSerializer
-    permission_classes = (IsAuthenticated,)
-
-
-class AllAuthorView(generics.ListAPIView):
+class AllCreateAuthorView(generics.ListCreateAPIView):
     queryset = AuthorModel.objects.all()
     serializer_class = AuthorSerializer
     permission_classes = (IsAuthenticated,)
 
 
-class DetailAuthorView(generics.RetrieveAPIView):
-    queryset = AuthorModel.objects.all()
-    serializer_class = AuthorSerializer
-    permission_classes = (IsAuthenticated,)
-
-
-class CreateAuthorView(generics.ListCreateAPIView):
-    queryset = AuthorModel.objects.all()
-    serializer_class = AuthorSerializer
-    permission_classes = (IsAuthenticated,)
-
-
-class UpdateAuthorView(generics.UpdateAPIView):
-    queryset = AuthorModel.objects.all()
-    serializer_class = AuthorSerializer
-    permission_classes = (IsAuthenticated,)
-
-
-class DeleteAuthorView(generics.DestroyAPIView):
+class DetailAuthorView(generics.RetrieveUpdateDestroyAPIView):
     queryset = AuthorModel.objects.all()
     serializer_class = AuthorSerializer
     permission_classes = (IsAuthenticated,)
