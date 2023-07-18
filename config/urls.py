@@ -19,4 +19,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/author/', include('author.urls')),
+    path('v1/api/book/',include('book.urls')),
 ]
