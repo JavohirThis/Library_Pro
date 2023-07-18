@@ -4,7 +4,7 @@ from django.db import models
 
 
 class AuthorModel(models.Model):
-    image = models.ImageField(upload_to ='upload/author')
+    image = models.ImageField(upload_to ='upload/author/')
     name = models.CharField(max_length=65, default='Nomalum')
     last_name = models.CharField(max_length=65, default='Nomalum')
     info = models.TextField()

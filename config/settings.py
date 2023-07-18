@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
 ]
-AUTH_USER_MODEL = 'hospital.CustomUser'
+AUTH_USER_MODEL = 'book.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
