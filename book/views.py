@@ -31,7 +31,7 @@ class AllCreateAuthorView(generics.ListCreateAPIView):
     permission_classes = (IsAuthenticated,)
 
 
-class DetailAuthorView(generics.RetrieveUpdateDestroyAPIView):
+class DetailDelUpAuthorView(generics.RetrieveUpdateDestroyAPIView):
     queryset = AuthorModel.objects.all()
     serializer_class = AuthorSerializer
     permission_classes = (IsAuthenticated,)
