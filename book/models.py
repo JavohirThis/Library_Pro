@@ -18,7 +18,7 @@ class CustomUser(AbstractUser):
 # Create your models here.
 
 class AuthorModel(models.Model):
-    name = models.CharField(max_length=50, default='')
+    name = models.CharField(max_length=50, default='' )
     fname = models.CharField(max_length=50, default='')
     date_of_birth = models.DateField(default=datetime.now)
     country=models.CharField(max_length=25,default='')
