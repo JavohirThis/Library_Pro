@@ -13,6 +13,7 @@ class AuthorModel(models.Model):
     contury = models.CharField(max_length=50, default='')
 
 
+
     def __str__(self) -> str:
         return self.name
     
