@@ -12,16 +12,6 @@ class CustomUser(AbstractUser):
     )
     roles = models.CharField(max_length=1,choices=ROLE_CHOICES)
 
-# Create your models here.
-
-# class AuthorModel(models.Model):
-#     name = models.CharField(max_length=50, default='' )
-#     fname = models.CharField(max_length=50, default='')
-#     date_of_birth = models.DateField(default=datetime.now)
-#     country=models.CharField(max_length=25,default='')
-#     class Meta:
-#         db_table = 'author'
-
 class BookCategoryModel(models.Model):
     name = models.CharField(max_length=50, default='')
     def __str__(self) -> str:
